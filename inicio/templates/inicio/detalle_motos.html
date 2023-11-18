@@ -1,0 +1,20 @@
+{%extends "base.html"%}
+
+
+{%block title_head%}
+<title>moto</title>
+{%endblock title_head%}
+
+{% block h1_header %}
+Moto ID:{{moto.id}}
+{% endblock h1_header %}
+
+{% block main %}
+
+<ul>
+    <li>Marca: {{moto.marca}}</li>
+    <li>Descripcion: {{moto.descripcion}}</li>
+    <li>Año: {{moto.año}}</li>
+
+</ul>
+{% endblock main %}
