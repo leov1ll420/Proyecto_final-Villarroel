@@ -1,5 +1,7 @@
 # Proyecto_final
 
+VIDEO DE MUESTRA DE COMO FUNCIONA LA PAGINA https://drive.google.com/drive/folders/1S2Y50K8r791SQiM6FvAZ4AbaByYmmR4d?usp=drive_link
+
 Bienvenido a mi plataforma de registro y gestión de vehículos. Esta aplicación web proporciona a los usuarios la capacidad de crear, editar y eliminar información sobre vehículos, ya sea autos o motocicletas. Además, ofrece funciones adicionales como registro de usuarios, inicio de sesión, y la posibilidad de ver y editar su perfil.
 
 Características Principales
@@ -34,3 +36,4 @@ Los usuarios pueden editar y eliminar sus vehículos desde la página principal 
 Perfil de Usuario:
 
 Cada usuario puede acceder a su perfil desde la barra de navegación, donde pueden ver y editar su información personal.
+
