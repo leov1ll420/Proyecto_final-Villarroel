@@ -7,3 +7,4 @@ class DatosExtra(models.Model):
     avatar=models.ImageField(upload_to='avatares',null=True,blank=True)
 
 
+

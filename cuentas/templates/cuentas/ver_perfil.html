@@ -1,0 +1,26 @@
+{%extends "base.html"%}
+
+
+{%block title_head%}
+<title>Perfil</title>
+{%endblock title_head%}
+
+{% block h1_header %}
+
+perfil
+{% endblock h1_header %}
+{% block main %}
+
+ <p>
+    <a href={% url "editar_perfil" %}>editar perfil</a>
+</p> 
+
+<ul>
+    <li><h1>Perfil de {{ datos_extra.user.username }}</h1></li>
+    <li><p>Biografía: {{ datos_extra.biografia }}</p></li>
+    <li>
+        <img src={{request.user.datosextra.avatar.url}} alt="avatar" height=100px>
+    </li>
+</ul>
+
+{% endblock main %}

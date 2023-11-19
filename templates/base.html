@@ -21,13 +21,16 @@
         <nav class="navbar navbar-light bg-light static-top">
             <div class="container">
                 <a class="navbar-brand" href={% url "inicio" %}>Inicio</a>
+                <a class="navbar-brand" href={% url "automoviles" %}>Automovil</a>
                 <a class="navbar-brand" href={% url "crear_motos" %}>Crear motos</a>
-                <a class="navbar-brand" href={% url "motos" %}>motos</a>
+                <a class="navbar-brand" href={% url "motos" %}>Motos</a>
                 {% if  not request.user.is_authenticated%}
-                <a class="btn btn-primary" href={% url "login" %}>iniciar sesion</a>
+                <a class="btn btn-primary" href={% url "login" %}>Iniciar sesion</a>
                 <a class="btn btn-secondary" href={% url "Registrarse" %}>Registrarse</a>
+                
                 {% else %}
-                <a class="navbar-brand" href={% url "editar_perfil" %}>
+                <a class="navbar-brand" href={% url "ver_perfil" %}>
+
                     {% if request.user.datosextra.avatar %}
                     <img src={{request.user.datosextra.avatar.url}} alt="avatar" height=20px>
                     {% endif %}

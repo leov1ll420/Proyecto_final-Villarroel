@@ -1,0 +1,22 @@
+{%extends "base.html"%}
+
+
+{%block title_head%}
+<title>Auto</title>
+{%endblock title_head%}
+
+{% block h1_header %}
+Auto ID:{{auto.id}}
+{% endblock h1_header %}
+
+{% block main %}
+
+<ul>
+    <li>Marca: {{auto.marca}}</li>
+    <li>Modelo: {{auto.modelo}}</li>
+    <li>Descripcion: {{auto.descripcion}}</li>
+    <li>Fecha de creacion: {{auto.fecha_creacion}}</li>
+    <li><img src={{auto.imagen.url}} alt="auto"height=100px></li>
+</ul>
+
+{% endblock main %}

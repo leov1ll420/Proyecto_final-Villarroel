@@ -1,0 +1,25 @@
+{%extends "base.html"%}
+
+
+{%block title_head%}
+<title>autos</title>
+{%endblock title_head%}
+
+{% block h1_header %}
+autos
+{% endblock h1_header %}
+
+{% block main %}
+<a href={% url "crear_auto" %}>Crear auto</a>
+
+{% if lista_de_autos %}
+<ul>
+    {% for auto in lista_de_autos %}
+    <li>|<a href={% url "detalle_auto" auto.id %}>{{auto}} </a>|<a href={% url "editar_auto" auto.id %}>Editar</a>| <a href={% url "eliminar_auto" auto.id %}>Eliminar</a>
+    </li>
+    {% endfor %}
+</ul>
+{% else %}
+<p>no se encontro ningun auto</p>
+{% endif %}
+{% endblock main %}
