@@ -16,10 +16,12 @@ perfil
 </p> 
 
 <ul>
-    <li><h1>Perfil de {{ datos_extra.user.username }}</h1></li>
-    <li><p>Biografía: {{ datos_extra.biografia }}</p></li>
+    <li><h1>Perfil de {{ datosextra.user.username }}</h1></li>
+    <li><p>Biografía: {{ datosextra.biografia }}</p></li>
     <li>
-        <img src={{request.user.datosextra.avatar.url}} alt="avatar" height=100px>
+        {% if request.user.datosextra.avatar %}
+                    <img src={{request.user.datosextra.avatar.url}} alt="avatar" height=100px>
+                    {% endif %}
     </li>
 </ul>
 

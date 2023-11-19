@@ -39,8 +39,8 @@ def registro(request):
 
 
 def ver_perfil(request):
-    datos_extra = DatosExtra.objects.get(user=request.user)  
-    return render(request, 'cuentas/ver_perfil.html', {'datos_extra': datos_extra})
+    datosextra = DatosExtra.objects.get(user=request.user)  
+    return render(request, 'cuentas/ver_perfil.html', {'datosextra': datosextra})
 
 
 
