@@ -66,7 +66,7 @@ def editar(request,motos_id):
             
             moto_a_editar.save()
             return redirect('motos')
-        return render(request,'inicio/editar_motos.html',{'fotmulario':formulario})
+        return render(request,'inicio/editar_motos.html',{'formulario':formulario})
     
     formulario=EditarMotoFormulario(initial={'marca':moto_a_editar.marca,'descripcion':moto_a_editar.descripcion,'año':moto_a_editar.año})
     return render(request,'inicio/editar_motos.html',{'formulario':formulario})
