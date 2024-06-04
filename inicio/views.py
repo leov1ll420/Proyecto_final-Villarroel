@@ -36,7 +36,7 @@ def crear_moto(request):
             añoMoto=info_limpia.get('año')
             
             
-            moto=Motos(marca=marcaMoto.lower(), descripcion=descripcionMoto, año=añoMoto)
+            moto=Motos(marca=marcaMoto.lower(), descripcion=descripcionMoto, año=añoMoto) # type: ignore
             moto.save()
 
             
@@ -60,9 +60,9 @@ def editar(request,motos_id):
         formulario=EditarMotoFormulario(request.POST)
         if formulario.is_valid():
             info_nueva=formulario.cleaned_data
-            moto_a_editar.marca=info_nueva.get('marca')
-            moto_a_editar.descripcion=info_nueva.get('descripcion')
-            moto_a_editar.año=info_nueva.get('año')
+            moto_a_editar.marca=info_nueva.get('marca') # type: ignore
+            moto_a_editar.descripcion=info_nueva.get('descripcion') # type: ignore
+            moto_a_editar.año=info_nueva.get('año') # type: ignore
             
             moto_a_editar.save()
             return redirect('motos')
