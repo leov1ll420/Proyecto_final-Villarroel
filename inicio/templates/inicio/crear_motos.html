@@ -13,7 +13,7 @@ crear moto
 
 <form action="" method="POST">
     {% csrf_token %}
-    {{formulario}}
+    {{ formulario.as_p }}
     <input type="submit" value="crear">
 </form>
 {% endblock main %}

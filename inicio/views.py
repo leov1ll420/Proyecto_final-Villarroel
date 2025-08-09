@@ -34,9 +34,10 @@ def crear_moto(request):
             marcaMoto=info_limpia.get('marca')
             descripcionMoto=info_limpia.get('descripcion')
             añoMoto=info_limpia.get('año')
+            precioMoto=info_limpia.get('precio')
             
             
-            moto=Motos(marca=marcaMoto.lower(), descripcion=descripcionMoto, año=añoMoto) # type: ignore
+            moto=Motos(marca=marcaMoto.lower(), descripcion=descripcionMoto, año=añoMoto, precio=precioMoto) # type: ignore
             moto.save()
 
             
@@ -63,12 +64,13 @@ def editar(request,motos_id):
             moto_a_editar.marca=info_nueva.get('marca') # type: ignore
             moto_a_editar.descripcion=info_nueva.get('descripcion') # type: ignore
             moto_a_editar.año=info_nueva.get('año') # type: ignore
+            moto_a_editar.precio=info_nueva.get('precio')# type: ignore
             
             moto_a_editar.save()
             return redirect('motos')
         return render(request,'inicio/editar_motos.html',{'formulario':formulario})
     
-    formulario=EditarMotoFormulario(initial={'marca':moto_a_editar.marca,'descripcion':moto_a_editar.descripcion,'año':moto_a_editar.año})
+    formulario=EditarMotoFormulario(initial={'marca':moto_a_editar.marca,'descripcion':moto_a_editar.descripcion,'año':moto_a_editar.año,'precio':moto_a_editar.precio})
     return render(request,'inicio/editar_motos.html',{'formulario':formulario})
 
 def detalle_moto(request,motos_id):
